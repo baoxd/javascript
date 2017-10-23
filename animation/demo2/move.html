@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>move.js</title>
+	
+</head>	
+<style>
+	#move{
+		width:100px;
+		height:100px;
+		background: #ededed;
+	}
+</style>
+<body>
+	<div id="move"></div>
+</body>
+</html>
+<script src="./js/move.min.js"></script>
+<script type="text/javascript">
+	// var move = require('move.min.js')
+	    move('#move')
+	    	.to(500, 200)
+	    	.rotate(180)
+	    	.scale(.5)
+	    	.set('background-color', '#888')
+	    	.set('border-color', 'black')
+	    	.duration('2s')
+	    	.skew(50, -10)
+	    	.then()
+	    	.set('opacity', 0)
+	    	.duration('0.3s')
+	    	.scale(0.1)
+	    	.pop()
+	    	.end();
+</script>
