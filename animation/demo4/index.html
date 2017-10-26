@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>纯CSS3实现3D立方体焦点图切换动画DEMO演示</title>
+  <meta name="author" content="Alberto Hartzet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="ani">
+	</div>
+</body>
+<script type="text/javascript" src="../../node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../../node_modules/velocity-animate/velocity.min.js"></script>
+<script type="text/javascript">
+	setInterval(function(){
+		$('.ani').velocity({
+			translateX: '100px'
+		},{
+			// duration: 400,
+			// easing: 'swing',
+			begin: function(){
+				console.log('begin');
+			},
+			progress: function(){
+				console.log('progress');
+			},
+			complete: function(){
+				console.log('complete');
+			},
+			display: function(){
+				console.log('display');
+			},
+			// loop: true
+		});
+	}, 5000);
+</script>
+</html>
