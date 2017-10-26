@@ -13,7 +13,7 @@ html, body {
 	height: 100px;
 	background-color: red;
 	transform: translateX(0px);
-	transition: all 1s ease-out;
+	/*transition: all 1s ease-out;*/
 }
 
 
