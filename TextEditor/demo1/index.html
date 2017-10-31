@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>kindEditor富文本编辑器</title>
+  <meta name="author" content="Alberto Hartzet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<h1>kindEditor编辑器</h1>
+	<textarea id="editor_id" name="content" style="width:700px;height:300px;">
+	&lt;strong&gt;HTML内容&lt;/strong&gt;
+	</textarea>
+</body>
+<script type="text/javascript" src="./kindeditor/kindeditor-all-min.js"></script>
+<script type="text/javascript" src="./kindeditor/lang/zh-CN.js"></script>
+<script type="text/javascript">
+	KindEditor.ready(function(K) {
+        window.editor = K.create('#editor_id', {
+        	items:[
+        		// 字体 
+        		'fontname',
+        		// 字体大小
+        		'fontsize',
+        		// 颜色
+        		'forecolor',
+        		// 文字背景
+        		'hilitecolor',
+        		// 粗体
+        		'bold',
+        		// 段落
+        		'formatblock',
+        		// 斜体
+        		'italic',
+        		'|',
+        		// 左对齐
+        		'justifyleft',
+        		// 居中
+        		'justifycenter',
+        		// 右对齐
+        		'justifyright',
+        		// 两端对齐
+        		'justifyfull',
+        		// 编号
+        		'insertorderedlist',
+        		// 项目符号
+        		'insertunorderedlist',
+        		// 程序代码
+        		'code',
+        		// 超级链接
+        		'link',
+        		// 上传图片
+        		'image',
+        		// 视频上传
+        		'media',
+        		// 后退
+        		'undo',
+        		// 前进
+        		'redo'
+        	],
+        	'uploadJson':''
+        });
+    });
+</script>
+</html>
