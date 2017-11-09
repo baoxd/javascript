@@ -10,31 +10,67 @@ module.exports = {
 	formId: 'uploadFileForm',
 	iframeName:'uploadFileIframe',
 	upload: function(opts){
-		var fileElement = opts.fileElement;
-		var suffixs = opts.suffixs;
+		// var fileElement = opts.fileElement;
+		// var suffixs = opts.suffixs;
+		this.suffixs = opts.suffixs;
 		this.url = opts.url || this.url;
-		this.fileElement = fileElement;
-		this.fileParent = $(fileElement).parent();
-
+		this.fileElement = opts.fileElement;
+		this.fileParent = $(this.fileElement).parent();
+		// 最大尺寸（单位KB）
+		this.maxSize = opts.maxSize;
+		// 验证不通过
+		if(!this.checkFile()){
+			return ;
+		}
 		// 生成临时form
 		this.makeForm();
-		if(suffixs && suffixs.length > 0){
-			if(!this.valiSuffixs(suffixs)){
-				alert('图片格式不正确');
-				this.complate();
-				return ;
-			}
-		}
 		// 提交表单
 		this.form.submit();
 		// 监听成功事件
 		var self = this;
 		self.iframe.on('load', function(){
 			// 获取接口返回数据
-			var data = $(this).contents().find('body').html();        
-	        self.complate();
-	        opts.success(JSON.parse(data));
+			var data = $(this).contents().find('body').html();
+			var arr = /[\s|\S]*(\{[\s\S]*\})[\s|\S]*/.exec(data);
+			self.complate();
+			if(arr && arr[1]){
+				opts.success(JSON.parse(arr[1]));
+			}
 		});
+	},
+	// 文件验证
+	checkFile: function(){
+		var suffixs = this.suffixs;
+		var fileElement = this.fileElement[0];
+		var maxSize = this.maxSize;
+		var fileSize;
+		var path;
+		var fso
+
+		if(suffixs && suffixs.length > 0){
+			if(!this.valiSuffixs(suffixs)){
+				alert('图片格式不正确');
+				this.complate();
+				return false;
+			}
+		}
+		try{
+			fileSize = fileElement.files[0].size;
+		}catch(e){
+			fileElement.select();
+			fileElement.blur();
+			path = document.selection.createRange().text;
+			fso = new ActiveXObject("Scripting.FileSystemObject");
+			fileSize = fso.GetFile(path).size;
+		}
+		if((fileSize / 1024) / maxSize){
+			alert('图片大小大于文件限制');
+			this.complate();
+			return false;
+		}
+
+		console.log('文件大小：'+fileSize);
+		return true;
 	},
 	valiSuffixs: function(suffixs){
 		try{
@@ -44,7 +80,7 @@ module.exports = {
 			var suffixs = suffixs.join('-');
 
 			var suffix = /\.[a-zA-Z]+$/.exec(file)[0].substring(1);
-			if(suffixs.indexOf(suffix) < 0){
+			if(suffixs.toLocaleLowerCase().indexOf(suffix.toLocaleLowerCase()) < 0){
 				return false;
 			}
 			return true;
@@ -53,8 +89,6 @@ module.exports = {
 		}
 	},
 	complate: function(){
-		console.log(this.fileParent);
-		console.log(this.fileElement);
 		this.fileElement.appendTo(this.fileParent);
         this.iframe.remove();
         this.form.remove();
@@ -64,6 +98,7 @@ module.exports = {
 		var fileElement = this.fileElement;
 		var formId = this.formId;
 		var iframeName = this.iframeName;
+		var url = this.url;
 		
 		// 存在临时form表单
 		if($('#'+formId).is('form')){
