@@ -3,6 +3,7 @@
  * 低版本IE的兼容性，故简单写了一个兼容IE的文件上传。
  * 
  * 原理： 利用iframe、form表单模拟异步文件上传，达到不刷新页面的目的
+ * tip: 因为使用了iframe模拟的异步上传，要保证当前页面的document.domain和iframe的document.domain相同
  */
 module.exports = {
 	url: '',
