@@ -4,6 +4,7 @@
  * 
  * 原理： 利用iframe、form表单模拟异步文件上传，达到不刷新页面的目的
  * tip: 因为使用了iframe模拟的异步上传，要保证当前页面的document.domain和iframe的document.domain相同
+ * 在获取文件尺寸时 IE兼容性不太好，如果有这方面的需求可以使用webuploder.js这个组件
  */
 module.exports = {
 	url: '',
