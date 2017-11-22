@@ -31,3 +31,60 @@ function str2ab(str) {
   }
   return buf;
 }
+
+// node的buffer转为arraybuffer
+function toArrayBuffer(buffer) {
+    var ab = new ArrayBuffer(buffer.length);
+    var view = new Uint8Array(ab);
+    for (var i = 0; i < buffer.length; ++i) {
+        view[i] = buffer[i];
+    }
+    return ab;
+}
+
+// arraybuffer转为Buffer
+function toBuffer(ab) {
+    var buffer = new Buffer(ab.byteLength);
+    var view = new Uint8Array(ab);
+    for (var i = 0; i < buffer.length; ++i) {
+        buffer[i] = view[i];
+    }
+    return buffer;
+}
+
+//将String字符串转换成Blob对象
+var blob = new Blob(["Hello World!"], {
+    type: 'text/plain'
+});
+console.info(blob);
+console.info(blob.slice(1, 3, 'text/plain'));
+
+// 将TypeArray  转换成 Blob 对象
+var array = new Uint16Array([97, 32, 72, 101, 108, 108, 111, 32, 119, 111, 114, 108, 100, 33]);
+//测试成功
+//var blob = new Blob([array], { type: "application/octet-binary" });
+//测试成功， 注意必须[]的包裹
+var blob = new Blob([array]);
+//将 Blob对象 读成字符串
+var reader = new FileReader();
+reader.readAsText(blob, 'utf-8');
+reader.onload = function (e) {
+    console.info(reader.result); //a Hello world!
+}
+
+// ArrayBuffer转Blob
+var buffer = new ArrayBuffer(32);
+var blob = new Blob([buffer]);       // 注意必须包裹[]
+
+// 将Blob对象转换成String字符串，使用FileReader的readAsText方法
+//将字符串转换成 Blob对象
+var blob = new Blob(['中文字符串'], {
+    type: 'text/plain'
+});
+//将Blob 对象转换成字符串
+var reader = new FileReader();
+reader.readAsText(blob, 'utf-8');
+reader.onload = function (e) {
+    console.info(reader.result);
+}
+
