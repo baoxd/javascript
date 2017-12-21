@@ -46,3 +46,4 @@ function _debounce(func, wait, immediate) {
   	return result;
   }
 }
+

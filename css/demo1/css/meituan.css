@@ -1,0 +1,296 @@
+* {
+	padding: 0;
+	margin:0;
+}
+html,head,body,article, aside, footer, header, hgroup, main, nav, section, div{
+	display: block;
+}
+
+html{
+	font-size: 50px;
+	height: 100%;
+	min-width: 320px;
+	overflow-x: hidden;
+}
+
+body{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serifs;
+	line-height: 1;
+	font-size: .28rem;
+	color: #333;
+	background-color: #f0efed;
+	margin: 0px;
+}
+
+a{
+	color: #06c1ae;
+	text-decoration: none;
+	outline: none;
+}
+
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+li{
+	display: list-item;
+	text-align: -webkit-match-parent;
+}
+
+.navbar{
+	height: 1.01rem;
+	background-color: #06c1ae;
+	color: #fff;
+	border-bottom: 1px solid #21897d;
+	display: -webkit-box;
+	position: relative;
+}
+
+.navbar .nav-wrap-left{
+	height: 1.01rem;
+	line-height: 1.01rem;
+}
+
+.navbar .box-search{
+	-webkit-box-flex: 1;
+	height: .64rem;
+	line-height: .64rem;
+	margin-top: .2rem;
+	position: relative;
+	border-radius: .06rem;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	background-color: rgba(0,0,0,.15);
+}
+
+.navbar .nav-wrap-right{
+	height: 100%;
+}
+
+a.react, label.react{
+	display: block;
+	color: inherit;
+	height: 100%;
+}
+
+.navbar .nav-city{
+	display: inline-block;
+	margin-left: .2rem;
+	margin-right: .2rem;
+	vertical-align: middle;
+	text-align: center;
+	font-size: .32rem;
+	line-height: 1;
+}
+
+space{
+	display: inline-block;
+	width: .12rem;
+}
+
+.icon-downarrow{
+	position: relative;
+}
+
+.text-icon{
+	display: inline-block;
+	vertical-align: middle;
+	font-family: base_icon;
+	font-style: normal;
+}
+
+.icon-downarrow:after{
+	content: '';
+	display: inline-block;
+	position: relative;
+	width: .5em;
+	height: .5em;
+	border-left: .03rem solid #fff;
+	border-bottom: .03rem solid #fff;
+	transform: scaleX(0.7) rotateZ(-45deg);
+	-webkit-transform: scaleX(0.7) rotateZ(-45deg);
+	-moz-transform: scaleX(0.7) rotateZ(-45deg);
+	-ms-transform: scaleX(0.7) rotateZ(-45deg);
+	top: -0.2em;
+}
+
+.navbar .icon-search{
+	position: absolute;
+	left: .2rem;
+	font-size: .26rem;
+	color: #fff;
+}
+
+.single-lin{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.navbar .box-search span{
+	padding-left: .6rem;
+	font-size: .26rem;
+	width: 100%;
+	display: block;
+	box-sizing: border-box;
+	color: #68dbce;
+}
+
+.nav-wrap-right a:last-child{
+	margin-right: .04rem;
+}
+
+.nav-wrap-right a{
+	display: inline-block;
+	height: 100%;
+	line-height: 1rem;
+	text-align: center;
+	width: .94rem;
+}
+
+.nav-btn{
+	display: inline-block;
+	font-size: .2rem;
+	line-height: 1;
+	vertical-align: middle;
+}
+
+.nav-btn .text-icon{
+	display: block;
+	font-size: .4rem;
+	margin: auto;
+	margin-bottom: .12rem;
+}
+
+dl.list{
+	display: block;
+	border-top: 1px solid #DDD8CE;
+	border-bottom: 1px solid #DDD8CE;
+	margin-top: .2rem;
+	margin-bottom: 0;
+	background-color: #fff;
+}
+
+dl.list-in{
+	margin: 0;
+	border-top: 0;
+}
+
+dl.list dt, dl.list dd{
+	margin: 0;
+	overflow: hidden;
+	font-size: inherit;
+	font-weight: 400;
+	position: relative;
+}
+
+.icon-wrapper{
+	height: 3.6rem;
+	transform: scale(1);
+	-webkit-transform: scale(1);
+}
+
+.page{
+	position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    overflow: hidden;
+    -webkit-box-align: center;
+    -webkit-box-pack: justify;
+    -ms-box-align: center;
+    -ms-flex-pack: justify;
+}
+
+.page.current{
+	z-index: 2;
+}
+
+.automove .page{
+	transition: transform .2s;
+	-webkit-transition: -webkit-transform .2s;
+}
+
+.icon-list{
+	height: auto;
+}
+
+.icon-list.page{
+	display: block;
+}
+
+.icon-list .icon{
+	display: inline-block;
+	box-sizing: border-box;
+	width: 20%;
+	text-align: center;
+}
+
+.icon-list .icon>a{
+	padding: .2rem 0;
+}
+
+.icon-list .new-icon-circle{
+	display: block;
+    margin: auto;
+    margin-bottom: .14rem;
+    width: .8rem;
+    height: .8rem;
+    border-radius: 10rem;
+    text-align: center;
+    line-height: .8rem;
+    font-size: .5rem;
+    color: #fff;
+}
+
+
+.icon-list .icon-circle{
+	display: block;
+    margin: auto;
+    margin-bottom: .14rem;
+    font-family: cate_icon;
+    width: .8rem;
+    height: .8rem;
+    border-radius: 10rem;
+    text-align: center;
+    line-height: .8rem;
+    font-size: .4rem;
+    color: #fff;
+}
+
+.icon-list .icon-desc{
+	text-align: center;
+	font-size: .24rem;
+	color: #666;
+}
+
+.list-ico{
+	position: absolute;
+	bottom: .22rem;
+	text-align: center;
+	width: 100%;
+}
+
+.list-ico li{
+	display: inline-block;
+	width: .16rem;
+	height: .16rem;
+	border-radius: 50%;
+	margin: 0 .15rem;
+	background-color: #F0EFED;
+}
+
+.list-ico li.active{
+	background-color: #06c1ae;
+}
+
+
+
+
+
