@@ -1,0 +1,59 @@
+html{
+	font-size: 100px;
+}
+
+.ios-checkbox{
+	width: 4rem;
+	height: 4rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: .05rem dashed #3DB7A9;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#checkbox{
+	width: 2rem;
+	height: 2rem;
+}
+
+.ios-checkbox label{
+	display: block;
+	width: 2rem;
+	height: 1rem;
+	border-radius: 1rem;
+	background-color: #ccc;
+	cursor: pointer;
+	position: relative;
+	transition: all .3s ease;
+}
+
+.ios-checkbox label:after{
+	content: '';
+	width: .9rem;
+	height: .9rem;
+	display: block;
+	border-radius: 100%;
+	background-color: #fff;
+	position: absolute;
+	top: .05rem;
+	left: .05rem;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+	transition: all .3s ease;
+}
+
+#checkbox:checked+label{
+	background-color: #34bf49;
+}
+
+#checkbox:checked+label:after{
+	left: 1.05rem;
+}
+
+
+

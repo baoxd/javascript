@@ -1,0 +1,54 @@
+.container{
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+}
+/*.item{
+	height: 100px;
+	width: 100px;
+	flex-grow: 1;
+}
+.red{
+	background: red;
+}
+.yellow{
+	background: yellow;
+}
+.blue{
+	background: blue;
+}*/
+
+@keyframes blink{
+	0% {
+		background-position: 0;
+	}
+	100% {
+		background-position: -1020px;
+	}
+}
+
+.container a{
+	display: inline-block;
+	cursor: pointer;
+}
+
+.container a span{
+	display: inline-block;
+	width: 62px;
+	height: 62px;
+	background: url('../imgs/likeicon.png') no-repeat ;
+	background-position: 0 0 ;
+}
+
+.container a:hover span{
+	animation: blink steps(17) 0.5s 1 both;
+}
+
+.container > span{
+	display: inline-block;
+	font-size: 16px;
+	margin-left: -12px;
+	margin-bottom: 2px;
+}
