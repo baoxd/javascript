@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>美团网练习</title>
+	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+	<style>
+	    @font-face {
+	        font-family: 'cate_icon';
+	        src: url(http://ms0.meituan.net/touch/css/i/fonts/cate4.woff?v7) format("woff"), url(http://ms0.meituan.net/touch/css/i/fonts/cate4.otf?v7); }
+	    @font-face {
+	        font-family: 'base_icon';
+	        src: url(http://ms0.meituan.net/touch/css/i/fonts/base14.woff) format("woff"), url(http://ms0.meituan.net/touch/css/i/fonts/base14.otf); }
+	</style>
+	<!-- 字体图标 -->
+	<link rel="stylesheet" type="text/css" href="http://ms0.meituan.net/touch/css/iconfont/iconfont.6dae7b05.css">
+	<link rel="stylesheet" type="text/css" href="./css/meituan2_base.css">
+	<link rel="stylesheet" type="text/css" href="./css/meituan2.css">
+</head>
+
+<body class="automove">
+	<!-- 页头 -->
+	<header class="navbar">
+		<!-- 城市选择 -->
+		<div class="nav-wrap-left">
+			<a class="react">
+				<span class="nav-city">
+					北京
+					<space></space>
+					<i class="text-icon icon-downarrow"></i>
+				</span>
+			</a>
+		</div>
+		<!-- search框 -->
+		<div class="box-search">
+			<a class="react">
+				<i class="icon-search text-icon">⌕</i>
+				<span class="single-line">输入商家/品类/商圈</span>
+			</a>
+		</div>
+		<!-- 我的 -->
+		<div class="nav-wrap-right">
+			<a class="react">
+				<span class="nav-btn">
+					<i class="text-icon">⍥</i>
+					我的
+				</span>
+			</a>
+		</div>
+	</header>
+
+	<!-- banner图 -->
+	<section class="banner">
+		<div class="carousel">
+			<a style="display: block; text-align: center;">
+				<img src="http://p1.meituan.net/mmc/dbc70b32f22415bc55d1523d7141735c18365.jpg">
+			</a>
+		</div>
+	</section>
+
+	<!-- 菜单列表 -->
+	<dl class="list list-in">
+		<dd class="icon-wrapper">
+			<!-- 当前页 -->
+			<ul class="icon-list page current">
+				<li class="icon">
+					<a>
+						<span class="new-icon-circle iconfont meishi" style="background-color: #fd9d21;"></span>
+						<span class="icon-desc">美食</span>
+					</a>
+				</li>
+				<li class="icon">
+					<a>
+						<span class="new-icon-circle iconfont dianying" style="background-color: #ff6767;"></span>
+						<span class="icon-desc">猫眼电影</span>
+					</a>
+				</li>
+				<li class="icon">
+					<a>
+						<span class="new-icon-circle iconfont jiudian" style="background-color: #8a90fa;"></span>
+						<span class="icon-desc">酒店</span>
+					</a>
+				</li>
+				<li class="icon">
+					<a>
+						<span class="new-icon-circle iconfont xiuxianyule" style="background-color: #fed030;"></span>
+						<span class="icon-desc">休闲娱乐</span>
+					</a>
+				</li>
+				<li class="icon">
+					<a>
+						<span class="new-icon-circle iconfont waimai" style="background-color: #fd9d21;"></span>
+						<span class="icon-desc">外卖</span>
+					</a>
+				</li>
+				<li class="icon">
+					<a>
+						<span class="new-icon-circle iconfont ktv" style="background-color: #fed030;"></span>
+						<span class="icon-desc">KTV</span>
+					</a>
+				</li>
+				<li class="icon">
+					<a>
+						<span class="new-icon-circle iconfont zhoubianyou" style="background-color: #4dc6ee;"></span>
+						<span class="icon-desc">周边游</span>
+					</a>
+				</li>
+				<li class="icon">
+					<a>
+						<span class="new-icon-circle iconfont liren" style="background-color: #ff80c2;"></span>
+						<span class="icon-desc">丽人</span>
+					</a>
+				</li>
+				<li class="icon">
+					<a>
+						<span class="new-icon-circle iconfont xiaochikuaican" style="background-color: #fd9d21;"></span>
+						<span class="icon-desc">小吃快餐</span>
+					</a>
+				</li>
+				<li class="icon">
+					<a>
+						<span class="icon-circle  " style="background-color: #599eec;">
+                    火
+                </span>
+						<span class="icon-desc">机票/火车票</span>
+					</a>
+				</li>
+			</ul>
+			<!-- 下一页 -->
+			<ul class="icon-list page next">
+				<li class="icon">
+					<a>
+						<span class="new-icon-circle iconfont meishi" style="background-color: #fd9d21;"></span>
+						<span class="icon-desc">美食</span>
+					</a>
+				</li>
+				<li class="icon">
+					<a>
+						<span class="new-icon-circle iconfont dianying" style="background-color: #ff6767;"></span>
+						<span class="icon-desc">猫眼电影</span>
+					</a>
+				</li>
+				<li class="icon">
+					<a>
+						<span class="new-icon-circle iconfont jiudian" style="background-color: #8a90fa;"></span>
+						<span class="icon-desc">酒店</span>
+					</a>
+				</li>
+				<li class="icon">
+					<a>
+						<span class="new-icon-circle iconfont xiuxianyule" style="background-color: #fed030;"></span>
+						<span class="icon-desc">休闲娱乐</span>
+					</a>
+				</li>
+				<li class="icon">
+					<a>
+						<span class="new-icon-circle iconfont waimai" style="background-color: #fd9d21;"></span>
+						<span class="icon-desc">外卖</span>
+					</a>
+				</li>
+				<li class="icon">
+					<a>
+						<span class="new-icon-circle iconfont ktv" style="background-color: #fed030;"></span>
+						<span class="icon-desc">KTV</span>
+					</a>
+				</li>
+				<li class="icon">
+					<a>
+						<span class="new-icon-circle iconfont zhoubianyou" style="background-color: #4dc6ee;"></span>
+						<span class="icon-desc">周边游</span>
+					</a>
+				</li>
+				<li class="icon">
+					<a>
+						<span class="new-icon-circle iconfont liren" style="background-color: #ff80c2;"></span>
+						<span class="icon-desc">丽人</span>
+					</a>
+				</li>
+				<li class="icon">
+					<a>
+						<span class="new-icon-circle iconfont xiaochikuaican" style="background-color: #fd9d21;"></span>
+						<span class="icon-desc">小吃快餐</span>
+					</a>
+				</li>
+				<li class="icon">
+					<a>
+						<span class="icon-circle  " style="background-color: #599eec;">
+                    火
+                </span>
+						<span class="icon-desc">机票/火车票</span>
+					</a>
+				</li>
+			</ul>
+			<!-- 底部按钮 -->
+			<ul class="list-ico">
+				<li class="active"></li>
+				<li></li>
+			</ul>
+		</dd>
+	</dl>
+
+	<!-- 导购列表 -->
+	<dl class="list" id="daogo">
+		<dd class="dd-padding">
+			<a href="" class="react">
+				<span class="info">
+					<strong>我们约吧</strong>
+					<small>恋人家人好朋友</small>
+				</span>
+				<span class="imgbox">
+					<img src="http://p0.meituan.net/mmc/fe4d2e89827aa829e12e2557ded363a112289.png" style="height: 100%;">
+				</span>
+			</a>
+			<a href="" class="react huilife">
+				<span class="info">
+					<strong>低价超值</strong>
+					<small>十元惠生活</small>
+				</span>
+				<span class="imgbox">
+					<img src="http://p0.meituan.net/mmc/a06d0c5c0a972e784345b2d648b034ec9710.jpg" style="height: 100%;">
+				</span>
+			</a>
+			<a href="" class="react scense">
+				<span class="info">
+					<strong>聚餐宴请</strong>
+					<small>朋友家人常聚聚</small>
+				</span>
+				<span class="imgbox">
+					<img src="http://p1.meituan.net/mmc/08615b8ae15d03c44cc5eb9bda381cb212714.png" style="height: 100%;">
+				</span>
+			</a>
+		</dd>
+	</dl>
+
+	<!-- 猜你喜欢 -->
+	<div id="guessLike" class="guess-like">
+		<dl class="list" style="opacity: 1;">
+			<dd>
+				<dl class="list">
+					<dt>猜你喜欢</dt>
+					<dd>
+						<a href="" class="react">
+							
+						</a>
+					</dd>
+				</dl>
+			</dd>
+		</dl>
+	</div>
+</body>
+</html>

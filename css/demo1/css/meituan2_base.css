@@ -1,0 +1,78 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,head,body,article, aside, footer, header, hgroup, main, nav, section, div{
+	display: block;
+}
+
+a{
+	text-decoration: none;
+	outline: 0;
+}
+
+ul, li{
+	list-style: none;
+}
+
+html{
+	font-size: 50px;
+	height: 100%;
+	min-width: 320px;
+	overflow-x: hidden;
+}
+
+a.react, label.react{
+	display: block;
+	height: 100%;
+	color: inherit;
+}
+
+.text-icon{
+	font-family: base_icon;
+	display: inline-block;
+	vertical-align: middle;
+	font-style: normal;
+}
+
+.icon-downarrow{
+	position: relative;
+}
+
+.single-line{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+img{
+	vertical-align: middle;
+	border: 0;
+}
+
+dl.list-in{
+	margin: 0;
+	border-top: 0;
+}
+
+.icon-wrapper{
+	height: 3.6rem;
+}
+
+weak, small{
+	color: #666;
+}
+
+.imgbox{
+	position: relative;
+}
+
+dl.list:first-child{
+	margin: 0;
+	border-top: 0;
+}
+
+dl.list .dd-padding, dl.list dt, dl.list dd>.react{
+	padding: .28rem .2rem;
+}

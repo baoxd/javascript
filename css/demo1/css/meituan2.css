@@ -1,0 +1,313 @@
+body{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: .28em;
+	line-height: 1;
+	color: #333;
+	background-color: #f0efed;
+}
+
+.navbar{
+	height: 1.01rem;
+	color: #fff;
+	background-color: #06c1ae;
+	border-bottom: 1px solid #21897d;
+	display: flex;
+	display: -webkit-flex;
+}
+
+.navbar .nav-wrap-left{
+	height: 1.01rem;
+	line-height: 1.01rem;
+}
+
+.navbar .nav-city{
+	display: inline-block;
+	line-height: 1;
+	font-size: .32rem;
+	margin-left: .2rem;
+	margin-right: .2rem;
+	vertical-align: middle;
+	text-align: center;
+}
+
+space{
+	width: .12rem;
+	display: inline-block;
+}
+
+.icon-downarrow:after{
+	content: '';
+	display: inline-block;
+	position: relative;
+	width: .5em;
+	height: .5em;
+	top: -.2em;
+	border-left: 0.03rem solid #fff;
+	border-bottom: 0.03rem solid #fff;
+	transform: scaleX(0.7) rotateZ(-45deg);
+}
+
+.navbar .box-search{
+	flex-grow: 1;
+	height: .64rem;
+	line-height: .64rem;
+	border-radius: .06rem;
+	background-color: rgba(0,0,0,.15);
+	position: relative;
+	margin-top: .2rem;
+}
+
+.navbar .box-search .icon-search{
+	position: absolute;
+	left: .2rem;
+	font-size: .26rem;
+	color: #fff;
+}
+
+.navbar .box-search span{
+	display: block;
+	width: 100%;
+	font-size: .26rem;
+	padding-left: .6rem;
+	color: #68dbce;
+	box-sizing: border-box;
+}
+
+.nav-wrap-right a{
+	height: 100%;
+	line-height: 1rem;
+	width: .94rem;
+	text-align: center;
+}
+
+.nav-wrap-right a:last-child{
+	margin-right: .04rem;
+}
+
+.nav-wrap-right .nav-btn{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: .2rem;
+	line-height: 1;
+}
+
+.nav-wrap-right .text-icon{
+	display: block;
+	font-size: .4rem;
+	margin-bottom: .12rem;
+}
+
+.banner{
+	height: 1rem;
+}
+
+.banner img{
+	width: 6.4rem;
+}
+
+.list{
+	border-top: 1px solid #DDD8CE;
+	border-bottom: 1px solid #DDD8CE;
+	margin-top: .2rem;
+	margin-bottom: 0;
+	background-color: #fff;
+}
+
+dl.list dd, dl.list dt{
+	margin: 0;
+	border-bottom: 1px solid #DDD8CE;
+	font-size: inherit;
+	font-weight: 400;
+	position: relative;
+	overflow: hidden;
+}
+
+dl.list dt:last-child, dl.list dd:last-of-type{
+	border-bottom: 0;
+}
+
+.page{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.icon-list{
+	height: auto;
+	/*font-size: 0;*/
+}
+
+.automove .page{
+	transition: transform .3s;
+	-webkit-transition: -webkit-transform .3s;
+}
+
+.list.current{
+	z-index: 2;
+}
+
+.icon-list .icon{
+	width: 20%;
+	display: inline-block;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.icon-list .icon>a{
+	display: block;
+	padding: .2rem 0;
+}
+
+.icon-list .new-icon-circle{
+	display: block;
+	margin: auto;
+	margin-bottom: .14rem;
+	width: .8rem;
+	height: .8rem;
+	border-radius: 50%;
+	line-height: .8rem;
+	text-align: center;
+	font-size: .5rem;
+	color: #fff;
+}
+
+.icon-list .icon-circle{
+	display: block;
+	margin: auto;
+	margin-bottom: .14rem;
+	width: .8rem;
+	height: .8rem;
+	border-radius: 50%;
+	line-height: .8rem;
+	text-align: center;
+	font-family: cate_icon;
+	font-size: .4rem;
+	color: #fff;
+}
+
+.icon-list .icon-desc{
+	color: #666;
+	text-align: center;
+	font-size: .24rem;
+}
+
+.page.next{
+	transform: translateX(105%);
+}
+
+.list-ico{
+	position: absolute;
+	bottom: .22rem;
+	width: 100%;
+	text-align: center;
+}
+
+.list-ico li{
+	display: inline-block;
+	width: .16rem;
+	height: .16rem;
+	border-radius: 50%;
+	margin: 0 .15rem;
+	background-color: #F0EFED;
+}
+
+.list-ico li.active{
+	background-color: #06c1ae;
+}
+
+#daogo .dd-padding{
+	padding: .12rem;
+	display: flex;
+	display: -webkit-flex;
+	text-align: center;
+	overflow: hidden;
+}
+
+#daogo .react{
+	flex-grow: 1;
+	padding: 0;
+	height: 2.26rem;
+	border-left: 1px solid #ddd8ce;
+	text-align: center;
+}
+
+#daogo .react:first-child{
+	margin-left: 0;
+	padding-left: 0;
+	border-left: 0;
+}
+
+#daogo .info{
+	display: inline-block;
+	width: 1.7rem;
+	vertical-align: top;
+	text-align: left;
+}
+
+#daogo .info strong{
+	margin-top: .12rem;
+	margin-bottom: .36rem;
+	font-size: .3rem;
+	color: #55a40f;
+	display: block; 
+}
+
+#daogo .imgbox{
+	width: 1.24rem;
+	height: 1.24rem;
+	display: block;
+	margin: auto;
+}
+
+.imgbox img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: -webkit-translate(-50%, -50%);
+}
+
+#daogo .huilife strong{
+	color: #ff3f0d;
+}
+
+#daogo .scense strong{
+	color: #f742a0;
+}
+
+#guessLike{
+	margin-top: .2rem;
+	margin-bottom: 0;
+	border-top: 1px solid #DDD8CE;
+	border-bottom: 1px solid #DDD8CE;
+	position: relative;
+	min-height: 5rem;
+	background-color: #fff;
+}
+
+dl.list dd dl {
+	padding-left: .2rem;
+	margin: 0;
+	margin-bottom: -1px;
+	border:0;
+}
+
+dl.list dt{
+	padding-bottom: .2rem;
+	font-size: .34rem;
+	color: #333;
+}
+
+
+
+
+
+
+
