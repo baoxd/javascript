@@ -1,0 +1,19 @@
+#container{
+	width: 700px;
+	margin: 0 auto;
+}
+
+#wrapper{
+	width: 500px;
+	float: left;
+}
+
+#navigation{
+	width: 200px;
+	float: right;
+}
+
+#extra{
+	clear: both;
+}
+

@@ -1,18 +1,18 @@
 #wrapper{
-	margin-left: -30%;
+	margin-left: -200px;
 	width: 100%;
 	float: left;
 }
 
 #content{
-	margin-left: 30%;
+	margin-left: 200px;
 }
 
 #navigation{
-	width: 30%;
+	width: 200px;
 	float: left;
 }
 
 #extra{
-	clear:both;
+	clear: left;
 }

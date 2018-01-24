@@ -1,0 +1,18 @@
+#container{
+	width: 700px;
+	margin: 0 auto;
+}
+
+#navigation{
+	width: 50%;
+	float: right;
+}
+
+#extra{
+	width: 50%;
+	float: right;
+}
+
+#footer{
+	clear: right;
+}
