@@ -1,22 +1,23 @@
 #wrapper{
 	width: 100%;
+	margin-left: -25%;
 	float: left;
 }
 
 #content{
-	margin-right: 400px;
+	margin-left: 25%;
+	margin-right: 200px;
 }
 
 #navigation{
 	width: 200px;
 	float: left;
-	margin-left: -400px;
+	margin-left: -200px;
 }
 
 #extra{
-	width: 200px;
+	width: 25%;
 	float: left;
-	margin-left: -200px;
 }
 
 #footer{

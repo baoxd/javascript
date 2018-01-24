@@ -10,8 +10,7 @@ function initCateHeight(height) {
     if (height === undefined) {
         height = $(window).height();
     }
-    height = parseInt(height) * 4 + 'px';
-    console.log(height);
+    height = parseInt(height) + 'px';
     sel.css({'height':  height, 'max-height': height});
 }
 

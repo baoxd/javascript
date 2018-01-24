@@ -1,0 +1,18 @@
+#wrapper{
+	margin-right: -30%;
+	width: 100%;
+	float: right;
+}
+
+#content{
+	margin-right: 30%;
+}
+
+#navigation{
+	width: 30%;
+	float: left;
+}
+
+#extra{
+	clear: both;
+}

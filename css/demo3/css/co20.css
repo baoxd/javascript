@@ -4,13 +4,14 @@
 }
 
 #content{
-	margin-right: 400px;
+	margin-left: 33%;
+	margin-right: 200px;
 }
 
 #navigation{
-	width: 200px;
+	width: 33%;
 	float: left;
-	margin-left: -400px;
+	margin-left: -100%;
 }
 
 #extra{

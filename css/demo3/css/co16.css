@@ -7,13 +7,13 @@
 	margin-right: 400px;
 }
 
-#navigation{
+#extra{
 	width: 200px;
 	float: left;
 	margin-left: -400px;
 }
 
-#extra{
+#navigation{
 	width: 200px;
 	float: left;
 	margin-left: -200px;
@@ -22,3 +22,4 @@
 #footer{
 	clear: both;
 }
+
