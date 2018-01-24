@@ -1,0 +1,18 @@
+#wrapper{
+	width: 50%;
+	float: right;
+}
+
+#navigation{
+	width: 25%;
+	float: left;
+}
+
+#extra{
+	width: 25%;
+	float: left;
+}
+
+#footer{
+	clear: both;
+}
