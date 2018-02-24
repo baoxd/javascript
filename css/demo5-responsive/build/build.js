@@ -75,9 +75,14 @@ module.exports = __webpack_require__(1);
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(2);
-let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
 let htmlDOM = document.getElementsByTagName('html')[0];
-htmlDOM.style.fontSize = htmlWidth / 10 + 'px';
+function resetHtmlFontSize() {
+    let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
+    htmlDOM.style.fontSize = htmlWidth / 10 + 'px';
+}
+resetHtmlFontSize();
+
+window.addEventListener('resize', resetHtmlFontSize);
 
 /***/ }),
 /* 2 */
