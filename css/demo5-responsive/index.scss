@@ -7,7 +7,6 @@ html {
 }
 .header {
     height: px2rem(40px);
-    width: 100%;
     padding-left: px2rem(32px);
     background-color: #80B373;
     .item {
@@ -20,5 +19,73 @@ html {
     .active {
         font-size: px2rem(17px);
         color: #fff;
+    }
+}
+
+.banner {
+    position: relative;
+    img {
+        width: 100%;
+        height: px2rem(220px);
+        display: block;
+    }
+    .tip {
+        position: absolute;
+        left: px2rem(15px);
+        bottom: px2rem(15px);
+        font-size: px2rem(22px);
+        color: #fff;
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    }
+}
+.news {
+    .news-list {
+        padding-left: px2rem(15px);
+        padding-right: px2rem(15px);
+        .item {
+            position: relative;
+            width: 100%;
+            height: px2rem(80px);
+            box-sizing: border-box;
+            margin-top: px2rem(10px);
+            border-bottom: px2rem(1px) solid #e5e5e5;
+            img {
+                width: px2rem(95px);
+                height: px2rem(70px);
+                margin-right: px2rem(8px);
+                float: left;
+            }
+            .title {
+                padding-top: px2rem(4px);
+                color: #404040;
+                font-size: px2rem(15px);
+                line-height: px2rem(20px);
+            }
+            .time {
+                position: absolute;
+                left: px2rem(103px);
+                bottom: px2rem(10px);
+                font-size: px2rem(12px);
+                color: #888;
+            }
+            .num {
+                position: absolute;
+                right: px2rem(4px);
+                bottom: px2rem(10px);
+                color: #888;
+                font-size: px2rem(12px);
+                &:before {
+                    content: ' ';
+                    display: block;
+                    width: px2rem(12px);
+                    height: px2rem(12px);
+                    position: absolute;
+                    left: px2rem(-16px);
+                    top: px2rem(0px);
+                    background-image: url('./images/read.png');
+                    background-size: contain;
+                }
+            }
+        }
     }
 }

@@ -12,6 +12,15 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.(jpg|png|gif)$/,
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        limit: 8192
+                    }
+                }]
+            },
+            {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
             },
