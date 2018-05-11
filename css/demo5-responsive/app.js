@@ -1,3 +1,4 @@
+test = r => require(['./test'], r);
 require('./index.scss');
 let htmlDOM = document.getElementsByTagName('html')[0];
 function resetHtmlFontSize() {
