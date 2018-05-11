@@ -17,6 +17,7 @@
             position: absolute;
             transform-style: preserve-3d;
             transition: all .5s ease;
+            animation: spin 10s linear infinite;
         }
         .cube-wrap .cube .cube-face {
             width: 100%;
@@ -46,7 +47,15 @@
             transform: rotateX(90deg) translateZ(150px);
         }
         .bottom {
-            transform: rotateX(-90deg) translateZ(150);
+            transform: rotateX(-90deg) translateZ(150px);
+        }
+        @keyframes spin {
+            form {
+                transform: rotateX(45deg) rotateY(45deg);
+            }
+            to {
+                transform: rotateX(405deg) rotateY(765deg);
+            }
         }
     </style>
 </head>
