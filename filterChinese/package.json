@@ -1,0 +1,17 @@
+{
+  "name": "filterchinese",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "baoxiangdong",
+  "license": "ISC",
+  "dependencies": {
+    "node-xlsx": "^0.12.1"
+  },
+  "bin": {
+    "fcn": "./index.js"
+  }
+}
