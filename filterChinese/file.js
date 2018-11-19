@@ -1,8 +1,7 @@
 const fs = require('fs');
 const path = require('path');
-const ignorePaths = ['node_modules', '.git', 'adocs', '.eslintrc', '.eslintignore',
-    'README', '.gitignore', '.cache-loader', '.DS_Store', 'awletdist', 'manifest', 'build',
-    'awlet.entry.json', 'package-lock', 'package'];
+const config = require('./config');
+const ignorePaths = config.ignorePaths;;
 
 /**
  * 文件夹
